@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Config</title>
   <link rel="stylesheet" href="style.css">
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/pt-br.js'></script>
   <script type="text/javascript" src="app.js" defer></script>
 </head>
 <body>
@@ -94,12 +97,13 @@
         <div class="large-section" style="order: 5;">
             <h2>Alerta</h2>
             <p>Você está no modo responsável. Deseja mudar para o modo paciente?</p>
-            <button class="Modo" aria-label="Mudar para modo paciente">Mudar para Paciente</button>
+            <button class="user-button" aria-label="Mudar para modo paciente">Mudar para Paciente</button>
         </div>
         <div class="large-section" style="order: 6;">
             <h2>Meus Documentos</h2>
             <p>Visualizar seus documentos?</p>
-            <button aria-label="Visualizar documentos">Visualizar</button>
+            <button class="user-button">Vizualizar</button>
+          
         </div>
     </section>
 </main>

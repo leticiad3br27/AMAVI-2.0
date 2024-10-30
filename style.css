@@ -459,3 +459,6 @@ input:checked + .slider:before {
   background-color: #0056b3; /* Cor de fundo quando o mouse está sobre o botão */
 }
 
+.modo{
+  background-color: #0056b3;
+}

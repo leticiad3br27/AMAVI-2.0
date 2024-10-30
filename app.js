@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const toggleButton = document.getElementById('toggle-btn');
   const sidebar = document.getElementById('sidebar');
 
+  if (toggleButton && sidebar) {
+    toggleButton.addEventListener('click', toggleSidebar);
+  }
+
   function toggleSidebar() {
     sidebar.classList.toggle('close');
     toggleButton.classList.toggle('rotate');
@@ -29,50 +33,63 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Adiciona event listeners aos botões de submenu
+  const subMenuButtons = sidebar.querySelectorAll('.dropdown-btn');
+  subMenuButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      toggleSubMenu(button);
+    });
+  });
+
   // Configuração do tema
   const themeToggle = document.getElementById('theme-toggle');
-  themeToggle.addEventListener('change', function() {
-    if (this.checked) {
-      document.body.classList.add('light-mode');
-      document.querySelector('header').classList.add('light-mode');
-      document.querySelectorAll('.sidebar a').forEach(link => link.classList.add('light-mode'));
-    } else {
-      document.body.classList.remove('light-mode');
-      document.querySelector('header').classList.remove('light-mode');
-      document.querySelectorAll('.sidebar a').forEach(link => link.classList.remove('light-mode'));
-    }
-  });
+  if (themeToggle) {
+    themeToggle.addEventListener('change', function() {
+      if (this.checked) {
+        document.body.classList.add('light-mode');
+        document.querySelector('header').classList.add('light-mode');
+        document.querySelectorAll('.sidebar a').forEach(link => link.classList.add('light-mode'));
+      } else {
+        document.body.classList.remove('light-mode');
+        document.querySelector('header').classList.remove('light-mode');
+        document.querySelectorAll('.sidebar a').forEach(link => link.classList.remove('light-mode'));
+      }
+    });
+  }
 
   // Configuração do calendário
-  var calendarEl = document.getElementById('calendar');
-  var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: 'dayGridMonth',
-    locale: 'pt-br',
-    events: [
-      {
-        title: 'Reunião',
-        start: '2024-10-30', // Data do evento
-        description: 'Reunião com a equipe para discutir o projeto'
-      },
-      {
-        title: 'Aniversário',
-        start: '2024-10-31', // Data do evento
-        description: 'Aniversário do João'
+  const calendarEl = document.getElementById('calendar');
+  if (calendarEl) {
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      locale: 'pt-br',
+      events: [
+        {
+          title: 'Reunião',
+          start: '2024-10-30',
+          description: 'Reunião com a equipe para discutir o projeto'
+        },
+        {
+          title: 'Aniversário',
+          start: '2024-10-31',
+          description: 'Aniversário do João'
+        }
+      ],
+      eventClick: function(info) {
+        alert('Título: ' + info.event.title + '\nDescrição: ' + info.event.extendedProps.description);
       }
-    ],
-    eventClick: function(info) {
-      alert('Título: ' + info.event.title + '\nDescrição: ' + info.event.extendedProps.description);
-    }
-  });
+    });
 
-  calendar.render();
+    calendar.render();
+  }
 
   // Modo ADM
   const adminSwitch = document.getElementById('adminSwitch');
-  adminSwitch.addEventListener('change', function() {
-    if (this.checked) {
-      // Redireciona para a página dashboard se o switch estiver ativado
-      window.location.href = 'ADM.html'; // Certifique-se de que o nome do arquivo está correto
-    }
-  });
+  if (adminSwitch) {
+    adminSwitch.addEventListener('change', function() {
+      if (this.checked) {
+        window.location.href = 'ADM.html';
+      }
+    });
+  }
 });
