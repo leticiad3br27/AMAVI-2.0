@@ -499,3 +499,148 @@ input:checked + .slider:before {
 .login-container button:hover {
   background-color: #0056b3;
 }
+
+
+/* Estiliza o contêiner principal dos dependentes */
+.container-dependentes {
+  min-width:900px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 3px;
+}
+
+/* Estiliza o cabeçalho do perfil dos dependentes */
+.profile-header-dependentes {
+  display: flex; /* Usa flexbox para alinhar os itens */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  padding: 20px; /* Espaçamento interno */
+  border-bottom: 1px solid #333; /* Borda inferior */
+}
+
+/* Estiliza a foto de perfil dos dependentes */
+.profile-pic-dependentes {
+  width: 150px; /* Largura da imagem */
+  height: 150px; /* Altura da imagem */
+  border-radius: 50%; /* Torna a imagem circular */
+  margin-right: 20px; /* Espaçamento à direita da imagem */
+  object-fit: cover; /* Ajusta a imagem para cobrir o contêiner */
+}
+
+/* Estiliza as informações do perfil dos dependentes */
+.profile-info-dependentes {
+  flex: 1; /* Faz com que o elemento ocupe o espaço restante */
+}
+
+/* Estiliza o título das informações do perfil */
+.profile-info-dependentes h1 {
+  font-size: 28px; /* Tamanho da fonte */
+  margin: 0; /* Remove a margem */
+  color: #fff; /* Cor do texto */
+}
+
+/* Estiliza os parágrafos das informações do perfil */
+.profile-info-dependentes p {
+  margin: 5px 0; /* Margem vertical */
+  color: #999; /* Cor do texto */
+}
+
+/* Estiliza as seções dos dependentes */
+.section-dependentes {
+  padding: 20px; /* Espaçamento interno */
+}
+
+/* Estiliza os títulos das seções dos dependentes */
+.section-dependentes h2 {
+  font-size: 18px; /* Tamanho da fonte */
+  border-bottom: 1px solid #333; /* Borda inferior */
+  padding-bottom: 10px; /* Espaçamento inferior */
+  margin-bottom: 20px; /* Margem inferior */
+  color: #fff; /* Cor do texto */
+}
+
+/* Estiliza as informações dos dependentes */
+.info-dependentes {
+  margin-bottom: 10px; /* Margem inferior */
+}
+
+/* Estiliza os rótulos das informações dos dependentes */
+.info-dependentes label {
+  font-weight: bold; /* Negrito */
+  display: block; /* Exibe como bloco */
+  margin-bottom: 5px; /* Margem inferior */
+  color: #999; /* Cor do texto */
+}
+
+/* Estiliza os valores das informações dos dependentes */
+.info-dependentes span {
+  color: #fff; /* Cor do texto */
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Cor de fundo escura */
+  color: #e0e0e0; /* Cor do texto clara */
+  margin: 0;
+  padding: 0;
+}
+.container-documentos {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.header-documentos {
+  background: #1f1f1f; /* Cor de fundo do cabeçalho escura */
+  color: #e0e0e0; /* Cor do texto clara */
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #77aaff 3px solid;
+}
+.header-documentos a {
+  color: #77aaff; /* Cor dos links */
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.nav-documentos {
+  float: right;
+  margin-top: 10px;
+}
+.nav-documentos ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-documentos ul li {
+  display: inline;
+  margin-left: 5px;
+}
+.content-documentos {
+  padding: 20px;
+  background: #1c1c1c; /* Cor de fundo das seções */
+  margin-top: 20px;
+  border-radius: 5px; /* Bordas arredondadas */
+}
+h1, h2 {
+  text-align: center;
+  color: #e0e0e0; /* Cor do texto clara */
+}
+.document {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #333; /* Borda inferior */
+}
+.document button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  background-color: #333; /* Cor de fundo dos botões */
+  color: #e0e0e0; /* Cor do texto dos botões */
+  border: none;
+  border-radius: 3px; /* Bordas arredondadas dos botões */
+  cursor: pointer;
+}
+.document button:hover {
+  background-color: #444; /* Cor de fundo dos botões ao passar o mouse */
+}

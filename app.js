@@ -93,3 +93,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+function mostrarSecao(secaoId) {
+  // Esconde todas as seções
+  const secoes = document.querySelectorAll('.content-documentos');
+  secoes.forEach(secao => {
+      secao.style.display = 'none';
+  });
+
+  // Mostra a seção selecionada
+  const secaoSelecionada = document.getElementById(secaoId);
+  secaoSelecionada.style.display = 'block';
+}
+
+function visualizar(arquivo) {
+  window.open(arquivo, '_blank');
+}
+
+function editar(arquivo) {
+  // Lógica para editar o arquivo
+  alert('Editar ' + arquivo);
+}
+
